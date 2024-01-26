@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 export default function App() {
   const handlePress = () =>
     Linking.openURL(
-      "https://github.com/Gioviral/Coder_Apps.git"
+      "https://github.com/Gioviral777/gioviral-apps/blob/main/App.js"
     );
   return (
     <View style={styles.container}>
