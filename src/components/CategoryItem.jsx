@@ -1,31 +1,50 @@
-import { Pressable, StyleSheet, Text, Image } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import Card from "./Card";
 import { colors } from "../global/colors";
+import { useDispatch } from "react-redux";
+import { setCategorySelected } from "../features/shop/shopSlice";
 
-const CategoryItem = ({category, setCategorySelected}) => {
+const CategoryItem = ({category, navigation}) => {
+  const dispatch = useDispatch()
     return (
-        <Card style={{ marginVertical: 20 }}>
-            <Pressable onPress={() => setCategorySelected(category)}>
-                <Text style={styles.text}>{category}</Text>
-            </Pressable>
+        <Pressable onPress={() => {
+          dispatch(setCategorySelected(category))
+          navigation.navigate("ItemListCategories", {category})
+          }}
+        >
+        <Card style={styles.cardContainer}>
+          <Text style={styles.text}>{category}</Text>
         </Card>
+      </Pressable>
     );
 };
 
 export default CategoryItem;
 
 const styles = StyleSheet.create({
+    cardContainer: {
+        marginHorizontal: 10,
+        marginVertical: 10,
+        padding: 10,
+        justifyContent: "center",
+        borderRadius: 10,
+        shadowColor: "white",
+        shadowOffset: {
+          height: 5,
+          width: 3,
+        },
+        elevation: 10,
+        shadowOpacity: 1,
+        shadowRadius: 1,
+      },
     text: {
-        flex: 1,
         backgroundColor: colors.chartreuse_100,
-        fontSize: 20,
-        color: 'white',
+        fontSize: 22,
+        color: 'black',
         justifyContent: 'center',
         textAlign: 'center',
         alignItems: 'center',
         fontWeight: 'bold',
+        fontFamily: 'ChivoRegular'
     },
-    card: {
-        marginVertical: 10,
-    }
 });

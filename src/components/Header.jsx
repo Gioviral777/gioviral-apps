@@ -6,23 +6,21 @@ function Header({title}){
         <View style={styles.conteiner}>
             <Text style={styles.text}>{title}</Text>
         </View>
-    )
+    );
 }
 
 export default Header;
 
 const styles = StyleSheet.create({
     conteiner: {
-        flex: 1,
-        backgroundColor: colors.gray_100,
-        height: 40,
+        height: 50,
         width: '100%',
+        backgroundColor: colors.gray_100,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: 8,
     },
     text: {
-        fontSize: 40,
+        fontSize: 20,
         color: 'white',
         textAlign: 'center',
         fontWeight: 'bold',

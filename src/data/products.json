@@ -9,10 +9,8 @@
     "stock": 100,
     "brand": "Estrategias",
     "category": "Growth Marketing",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Estrategias.png"
-    ]
+    "thumbnail": "https://i.ibb.co/n7skQRM/estretegias.png",
+    "images": ["https://i.ibb.co/n7skQRM/estretegias.png"]
   },
   {
     "id": 2,
@@ -24,10 +22,8 @@
     "stock": 100,
     "brand": "Inbound Marketing",
     "category": "Growth Marketing",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/inbound marketing.png"
-    ]
+    "thumbnail": "https://i.ibb.co/ZmQ7bQQ/inbound-marketing.png",
+    "images": ["https://i.ibb.co/ZmQ7bQQ/inbound-marketing.png"]
   },
   {
     "id": 3,
@@ -39,10 +35,8 @@
     "stock": 100,
     "brand": "Marketing de contenidos",
     "category": "Growth Marketing",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/marketing de contenido.png"
-    ]
+    "thumbnail": "https://i.ibb.co/TmnNRC5/marketing-de-contenido.png",
+    "images": ["https://i.ibb.co/TmnNRC5/marketing-de-contenido.png"]
   },
   {
     "id": 4,
@@ -54,11 +48,10 @@
     "stock": 100,
     "brand": "Landing page",
     "category": "Desarrollo Web",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/landing page.png"
-    ]
-  },{
+    "thumbnail": "https://i.ibb.co/n1GrN82/landing-page.png",
+    "images": ["https://i.ibb.co/n1GrN82/landing-page.png"]
+  },
+  {
     "id": 5,
     "title": "Web profesional",
     "description": "Diseño y creación de página web para ofrecer un servicio y tener prescencia",
@@ -68,10 +61,8 @@
     "stock": 100,
     "brand": "Web profesional",
     "category": "Desarrollo Web",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/web profesional.png"
-    ]
+    "thumbnail": "https://i.ibb.co/FzTkcmh/web-profesional.png",
+    "images": ["https://i.ibb.co/FzTkcmh/web-profesional.png"]
   },
   {
     "id": 6,
@@ -83,10 +74,8 @@
     "stock": 100,
     "brand": "Tienda Online",
     "category": "Desarrollo Web",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Tienda Online.png"
-    ]
+    "thumbnail": "https://i.ibb.co/zHg7zcm/Tienda-Online.png",
+    "images": ["https://i.ibb.co/zHg7zcm/Tienda-Online.png"]
   },
   {
     "id": 7,
@@ -98,10 +87,8 @@
     "stock": 100,
     "brand": "Web a medida",
     "category": "Desarrollo Web",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Web a medida.png"
-    ]
+    "thumbnail": "https://i.ibb.co/rbtWfzG/Web-a-medida.png",
+    "images": ["https://i.ibb.co/rbtWfzG/Web-a-medida.png"]
   },
   {
     "id": 8,
@@ -113,10 +100,8 @@
     "stock": 100,
     "brand": "Android",
     "category": "Desarrollo Mobile",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Android.png"
-    ]
+    "thumbnail": "https://i.ibb.co/TKDBH33/Android.png",
+    "images": ["https://i.ibb.co/TKDBH33/Android.png"]
   },
   {
     "id": 9,
@@ -128,10 +113,8 @@
     "stock": 100,
     "brand": "iOS",
     "category": "Desarrollo Mobile",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/iOS.png"
-    ]
+    "thumbnail": "https://i.ibb.co/gtzvDcc/iOS.png",
+    "images": ["https://i.ibb.co/gtzvDcc/iOS.png"]
   },
   {
     "id": 10,
@@ -143,10 +126,8 @@
     "stock": 100,
     "brand": "Personales",
     "category": "Finanzas",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Personales.png"
-    ]
+    "thumbnail": "https://i.ibb.co/xXXc2qZ/Personales.png",
+    "images": ["https://i.ibb.co/xXXc2qZ/Personales.png"]
   },
   {
     "id": 11,
@@ -158,10 +139,8 @@
     "stock": 100,
     "brand": "Empresariales",
     "category": "Finanzas",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Empresariales.png"
-    ]
+    "thumbnail": "https://i.ibb.co/yW1zcjx/Empresariales.png",
+    "images": ["https://i.ibb.co/yW1zcjx/Empresariales.png"]
   },
   {
     "id": 12,
@@ -173,10 +152,8 @@
     "stock": 100,
     "brand": "Coaching",
     "category": "Liderazgo",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Coaching.png"
-    ]
+    "thumbnail": "https://i.ibb.co/p0fGTnd/Coaching.png",
+    "images": ["https://i.ibb.co/p0fGTnd/Coaching.png"]
   },
   {
     "id": 13,
@@ -188,10 +165,8 @@
     "stock": 100,
     "brand": "Consultoría",
     "category": "Liderazgo",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Consultorias.png"
-    ]
+    "thumbnail": "https://i.ibb.co/QkjTYCp/Consultorias.png",
+    "images": ["https://i.ibb.co/QkjTYCp/Consultorias.png"]
   },
   {
     "id": 14,
@@ -203,10 +178,8 @@
     "stock": 100,
     "brand": "Mentoría",
     "category": "Liderazgo",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Mentorias.png"
-    ]
+    "thumbnail": "https://i.ibb.co/RNnRycZ/Mentorias.png",
+    "images": ["https://i.ibb.co/RNnRycZ/Mentorias.png"]
   },
   {
     "id": 15,
@@ -218,9 +191,7 @@
     "stock": 100,
     "brand": "Infoproductos",
     "category": "Ventas",
-    "thumbnail": "",
-    "images": [
-      "./assets/productos/Infoproductos.png"
-    ]
+    "thumbnail": "https://i.ibb.co/mR6nw4K/Infoproductos.png",
+    "images": ["https://i.ibb.co/mR6nw4K/Infoproductos.png"]
   }
 ]

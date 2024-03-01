@@ -1,15 +1,13 @@
-import { View, StyleSheet, Image} from "react-native";
-import Header from "../components/Header";
-import Categories from "../components/Categories";
+import { View, StyleSheet} from "react-native";
 import { colors } from "../global/colors";
+import Categories from "../components/Categories";
 
-function Home({setCategorySelected}){
+function Home({navigation}){
     return(
         <View style={styles.conteiner}>
-            <Header title="Inicio"></Header>
-            <Categories setCategorySelected={setCategorySelected}></Categories>
+            <Categories navigation={navigation}></Categories>
         </View>
-    )
+    );
 }
 
 export default Home;
@@ -22,6 +20,7 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: 8,
+        paddingVertical: 180,
+        paddingHorizontal: 80,
     },
 });

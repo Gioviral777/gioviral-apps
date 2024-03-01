@@ -1,29 +1,77 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, Image, Pressable, useWindowDimensions } from "react-native";
 import Card from "./Card";
-import { colors } from "../global/colors";
+import React, { useEffect, useState } from "react";
 
-const ProductItem = ({product}) => {
+const ProductItem = ({ product, navigation }) => {
+    const [isPortrait, setIsPortrait] = useState(true);
+    const [isLandscape, setIsLandscape] = useState(false);
+
+    const { width, height } = useWindowDimensions();
+  
+    console.log(width, height);
+  
+    useEffect(()=> {
+      if(height > width) {
+        setIsPortrait(true);
+        setIsLandscape(false);
+      } else {
+        setIsPortrait(false);
+        setIsLandscape(true);
+      }
+    }, [width, height])
+
+    /* console.log(isPortrait, isLandscape); */
+
     return (
-        <Card style={styles.card}>
-            <Text style={styles.text}>{product.title}</Text>
-        </Card>
+        <>
+            <Pressable style={styles.card} onPress={() => navigation.navigate("ItemDetail", {id: product.id})}>
+                <Card
+                style={{
+                    marginVertical: 20,
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                }}
+                >
+                <Text style={width < 350 ? styles.textMin : styles.text}>{product.title}</Text>
+                <Image
+                    style={styles.image}
+                    resizeMode="cover"
+                    source={{ uri: product.thumbnail }}
+                />
+                </Card>
+            </Pressable>
+        </>
     );
 };
 
 export default ProductItem;
 
 const styles = StyleSheet.create({
-    text: {
-        flex: 1,
-        backgroundColor: colors.chartreuse_100,
-        fontSize: 20,
-        color: 'black',
-        justifyContent: 'center',
-        textAlign: 'center',
-        alignItems: 'center',
-        fontWeight: 'bold',
-    },
     card: {
-        marginVertical: 10,
-    }
+        height: 100,
+        padding: 20,
+        margin: 15,
+        borderWidth: 2,
+        borderRadius: 10,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: 4
+      },
+      image: {
+        minHeight: 90,
+        minWidth: 90,
+        width: "30%",
+        borderRadius: 5,
+      },
+      text: {
+        width: "70%",
+        fontFamily: "ChivoRegular",
+        fontSize: 20,
+      },
+      textMin: {
+        width: "70%",
+        fontFamily: "ChivoRegular",
+        fontSize: 15,
+      },
 });
