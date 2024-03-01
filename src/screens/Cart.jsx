@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Pressable } from 'react-native';
 import allCartItems from '../data/cart.json';
 import { useEffect, useState } from 'react';
 import CartItem from '../components/CartItem';
@@ -16,13 +16,21 @@ const Cart = ()=> {
   }, []);
 
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList 
+        style={styles.list}
         data={cartItems}
         renderItem={({item})=> <CartItem item={item}></CartItem>}
         keyExtractor={(cartItems) => cartItems.id}>
-          <Text>Total: ${total}</Text>
       </FlatList>
+      <View style={styles.confirmContainer}>
+        <Pressable>
+          <Text style={styles.confirmText}>
+            Confirm
+          </Text>
+        </Pressable>
+        <Text style={styles.confirmText}>Total: ${total}</Text>
+      </View>
     </View>
   )
 }
@@ -30,12 +38,12 @@ const Cart = ()=> {
 export default Cart
 
 const styles = StyleSheet.create({
-  conteiner: {
+  container: {
     flex: 1,
     paddingBottom: 130,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: colors.gray_100,
+    backgroundColor: colors.black_100,
   },
   list: {
     width: "100%",
@@ -44,7 +52,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'gray',
+    backgroundColor: 'black',
     padding: 15,
     width: '100%',
   },
