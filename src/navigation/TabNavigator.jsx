@@ -8,6 +8,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import OrdersStack from "./OrdersStack";
 import { FontAwesome6 } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 
 const TabNavigator = ()=> {
     const Tab = createBottomTabNavigator()
@@ -18,7 +19,7 @@ const TabNavigator = ()=> {
                 tabBarShowLabel: false,//Para sacar el detalle de los iconos
                 tabBarStyle: styles.tabBar
             }}>
-                <Tab.Screen name="Shop" component={ShopStack} options={{
+                <Tab.Screen name="ShopTab" component={ShopStack} options={{
                     tabBarIcon: ({focused})=> {
                         return (
                             <View style={styles.tabContainer}>
@@ -28,7 +29,7 @@ const TabNavigator = ()=> {
                         );
                     },
                 }}/>
-                <Tab.Screen name="Cart" component={CartStack} options={{
+                <Tab.Screen name="CartTab" component={CartStack} options={{
                     tabBarIcon: ({focused})=> {
                         return (
                             <View style={styles.tabContainer}>
@@ -38,7 +39,7 @@ const TabNavigator = ()=> {
                         );
                     },
                 }}/>
-                <Tab.Screen name="Orders" component={OrdersStack} options={{
+                <Tab.Screen name="OrdersTab" component={OrdersStack} options={{
                     tabBarIcon: ({focused})=> {
                         return (
                             <View style={styles.tabContainer}>

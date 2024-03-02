@@ -10,7 +10,7 @@ const CartStack =()=> {
             <Stack.Screen name="Cart" component={Cart}>
             </Stack.Screen>
         </Stack.Navigator>
-    )
-}
+    );
+};
 
 export default CartStack

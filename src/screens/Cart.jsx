@@ -1,39 +1,49 @@
-import { StyleSheet, Text, View, FlatList, Pressable } from 'react-native';
-import allCartItems from '../data/cart.json';
-import { useEffect, useState } from 'react';
-import CartItem from '../components/CartItem';
-import React from 'react';
+import { useEffect, useState } from "react";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
+import allCartItems from "../data/cart.json";
+import CartItem from "../components/CartItem";
+import { useSelector } from "react-redux";
+import { usePostOrderMutation } from "../services/shopService";
 import { colors } from '../global/colors';
 
 const Cart = ()=> {
-  const[cartItems, setCartItems] = useState([]);
-  const[total, setTotal] = useState(0);
+  /* const[cartItems, setCartItems] = useState([]);
+  const[total, setTotal] = useState(0); */
 
-  useEffect(()=> {
+  const cartItems = useSelector((state) => state.cartReducer.value.items);
+  const total = useSelector((state) => state.cartReducer.value.total);
+  const [triggerPost, result] = usePostOrderMutation();
+
+  const confirmCart = ()=> {
+    triggerPost({total, cartItems, user: "loggedUser"})
+  }
+  /* useEffect(()=> {
     const total = allCartItems.reduce((acum, currentItem)=> acum += (currentItem.quantity * currentItem.price), 0)
     setTotal(total);
     setCartItems(allCartItems);
-  }, []);
+  }, []); */
 
   return (
     <View style={styles.container}>
-      <FlatList 
-        style={styles.list}
-        data={cartItems}
-        renderItem={({item})=> <CartItem item={item}></CartItem>}
-        keyExtractor={(cartItems) => cartItems.id}>
-      </FlatList>
-      <View style={styles.confirmContainer}>
-        <Pressable>
-          <Text style={styles.confirmText}>
-            Confirm
-          </Text>
-        </Pressable>
-        <Text style={styles.confirmText}>Total: ${total}</Text>
-      </View>
+      {cartItems.length > 0 ? (
+        <>
+          <FlatList
+            style={styles.list}
+            data={cartItems}
+            renderItem={({ item }) => <CartItem item={item} />}
+            keyExtractor={(cartItem) => cartItem.id}
+          />
+          <Text style={styles.confirmText}>Total: ${total}</Text>
+          <Pressable onPress={confirmCart}>
+            <Text style={styles.confirmText}>Confirm</Text>
+          </Pressable>
+        </>
+      ) : (
+        <Text style={styles.confirmText}>No hay productos agregados</Text>
+      )}
     </View>
-  )
-}
+  );
+};
 
 export default Cart
 
