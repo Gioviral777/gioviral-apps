@@ -4,21 +4,18 @@ import { StyleSheet, View, Text } from "react-native";
 import ShopStack from '../navigation/ShopStack';
 import CartStack from "./CartStack";
 import { colors } from "../global/colors";
-import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import OrdersStack from "./OrdersStack";
-import { FontAwesome6 } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 
 const TabNavigator = ()=> {
     const Tab = createBottomTabNavigator()
     return(
-        <NavigationContainer>
             <Tab.Navigator screenOptions={{
                 headerShown: false,//para manejar el encabezado extra
                 tabBarShowLabel: false,//Para sacar el detalle de los iconos
                 tabBarStyle: styles.tabBar
-            }}>
+                }}>
                 <Tab.Screen name="ShopTab" component={ShopStack} options={{
                     tabBarIcon: ({focused})=> {
                         return (
@@ -38,7 +35,7 @@ const TabNavigator = ()=> {
                             </View>
                         );
                     },
-                }}/>
+                    }}/>
                 <Tab.Screen name="OrdersTab" component={OrdersStack} options={{
                     tabBarIcon: ({focused})=> {
                         return (
@@ -48,11 +45,10 @@ const TabNavigator = ()=> {
                             </View>
                         );
                     },
-                }}/>
+                    }}/>
             </Tab.Navigator>
-        </NavigationContainer>
-    )
-}
+    );
+};
 
 export default TabNavigator
 
