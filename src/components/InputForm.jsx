@@ -17,7 +17,7 @@ const InputForm = ({ label, error, onChange, isSecure }) => {
         style={styles.input}
         value={input}
         onChangeText={onChangeText}
-        secureTextEntry={isSecure}
+        secureTextEntry={isSecure}//si cambiamos el parámetro a true lo muestra con circulitos y false la clave
       />
       {error ? <Text style={styles.error}>{error}</Text> : null}
     </View>

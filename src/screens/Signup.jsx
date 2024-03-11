@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../features/auth/authSlice";
 import { signupSchema } from "../validations/signupSchema";
 import { colors } from "../global/colors";
+import { useNavigation } from '@react-navigation/native';
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ const Signup = () => {
   const [errorConfirmPassword, setErrorConfirmPassword] = useState("");
   const [triggerSignup, result] = useSignUpMutation();
 
+  const navigation = useNavigation();
   const dispatch = useDispatch();
 
   //console.log(result)
@@ -32,7 +34,7 @@ const Signup = () => {
       setErrorPassword("");
       setErrorConfirmPassword("");
 
-      signupSchema.validateSync({ password, confirmPassword, email });
+      signupSchema.validateSync({ email, password, confirmPassword });
       triggerSignup({ email, password });
       console.log("Registro exitoso");
     } catch (err) {
@@ -50,6 +52,7 @@ const Signup = () => {
         default:
           break;
       }
+      console.log(err.message)
     }
   };
 
@@ -61,34 +64,38 @@ const Signup = () => {
 
   return (
     <View style={styles.main}>
+      <View style={styles.container}>
             <Text style={styles.title}>Register</Text>
             <InputForm 
                 label={"Email"} 
-                error={errorMail} 
                 onChange={setEmail} 
+                error={errorMail} 
             />
             <InputForm
                 label={"Password"}
-                error={errorPassword}
                 onChange={setPassword}
+                error={errorPassword}
                 isSecure={true}
             />
             <InputForm
                 label={"Confirm password"}
-                error={errorConfirmPassword}
                 onChange={setConfirmPassword}
+                error={errorConfirmPassword}
                 isSecure={true}
             />
-            <SubmitButton 
+            <Text></Text>
+            <SubmitButton
                 onPress = {onSubmit}
-                title = "Send"
+                title = "Register"
             />
             <Text style={styles.subTitle}>Already have an account?</Text>
-            <Pressable onPress={()=> NavigationPreloadManager.navigate('Login')}>
-                <Text style={styles.subLink}>Login</Text>
-            </Pressable>
-            <SubmitButton title={"Register"} onPress={onSubmit} />
+            {result.isLoading ? (
+                <ActivityIndicator size="large" color="#0000ff" />
+            ) : (
+                <SubmitButton title={"Login"} onPress={()=> navigation.navigate('Login')} />
+            )}
         </View>
+    </View>
   );
 };
 
@@ -100,13 +107,14 @@ const styles = StyleSheet.create({
         height: "100%",
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: colors.black_100,
     },
     container: {
         width: "90%",
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.gray_100,
+        backgroundColor: colors.chartreuse_100,
         gap: 15,
         paddingVertical: 20,
         borderRadius: 10,
@@ -124,5 +132,5 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontFamily: "ChivoRegular",
         color: "black",
-    }
+    },
 });
