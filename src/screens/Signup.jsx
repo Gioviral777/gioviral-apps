@@ -8,6 +8,7 @@ import { setUser } from "../features/auth/authSlice";
 import { signupSchema } from "../validations/signupSchema";
 import { colors } from "../global/colors";
 import { useNavigation } from '@react-navigation/native';
+import { ActivityIndicator } from "react-native";
 
 const Signup = () => {
   const [email, setEmail] = useState("");

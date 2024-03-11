@@ -5,4 +5,7 @@ export const loginSchema = object().shape({
   password: string()
     .required("Password is required")
     .min(6, "Password must be at least 6 characters"),
+    password: string()
+    .oneOf([ref("password"), null], "Password must match")
+    .required(" Password is required"),
 });
