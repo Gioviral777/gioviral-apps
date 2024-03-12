@@ -4,6 +4,7 @@ import ProductItem from "../components/ProductItem";
 import Search from "../components/Search";
 import { useSelector } from "react-redux";
 import { useGetProductsByCategoryQuery } from "../services/shopService";
+import * as Animatable from 'react-native-animatable';
 
 function ItemListCategories({ navigation }) {
   const [products, setProducts] = useState([]);
@@ -32,14 +33,14 @@ function ItemListCategories({ navigation }) {
   }, [productsFilteredByCategory, keyword]);
 
   return (
-    <View style={styles.container}>
+    <Animatable.View animation="fadeInDownBig" style={styles.container}>
       <Search onSearch={setKeyword} />
       <FlatList
         data={products}
         renderItem={({ item }) => <ProductItem product={item} navigation={navigation} />}
         keyExtractor={(item) => item.id}
       />
-    </View>
+    </Animatable.View>
   );
 }
 

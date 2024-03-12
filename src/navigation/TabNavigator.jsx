@@ -7,6 +7,7 @@ import { colors } from "../global/colors";
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import OrdersStack from "./OrdersStack";
+import MyProfileStack from "../navigation/MyProfileStack";
 
 const TabNavigator = ()=> {
     const Tab = createBottomTabNavigator()
@@ -45,7 +46,17 @@ const TabNavigator = ()=> {
                             </View>
                         );
                     },
-                    }}/>
+                }}/>
+                <Tab.Screen name="MyProfileStack" component={MyProfileStack} options={{
+                    tabBarIcon: ({focused})=> {
+                        return (
+                            <View style={styles.tabContainer}>
+                                <FontAwesome6 name="user-astronaut" size={40} color={focused ? "black" : "grey"} />
+                                <Text style={{color:focused ? "black" : "grey"}}>My Profile</Text>
+                            </View>
+                        );
+                    },
+                }}/>
             </Tab.Navigator>
     );
 };

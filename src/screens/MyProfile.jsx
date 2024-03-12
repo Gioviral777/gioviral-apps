@@ -2,6 +2,7 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../global/colors";
 import { useSelector } from "react-redux";
+import shopService from '../services/shopService';
 
 const MyProfile = ({ navigation }) => {
   const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);
@@ -49,14 +50,14 @@ const styles = StyleSheet.create({
   button: {
     width: "80%",
     elevation: 10,
-    backgroundColor: colors.blue_400,
+    backgroundColor: colors.chartreuse_100,
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
   },
   text: {
-    fontFamily: "InterRegular",
-    fontSize: 18,
-    color: "white",
+    fontFamily: "ChivoBold",
+    fontSize: 20,
+    color: "black",
   },
 });
