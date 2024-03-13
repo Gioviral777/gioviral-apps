@@ -15,7 +15,7 @@ export default Home;
 const styles = StyleSheet.create({
     conteiner: {
         flex: 1,
-        backgroundColor: colors.gray_100,
+        backgroundColor: colors.black_100,
         height: 80,
         width: '100%',
         justifyContent: 'center',
