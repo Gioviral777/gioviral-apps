@@ -2,7 +2,6 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { colors } from "../global/colors";
 import { useSelector } from "react-redux";
-import shopService from '../services/shopService';
 
 const MyProfile = ({ navigation }) => {
   const { profileImage, imageCamera } = useSelector((state) => state.authReducer.value);

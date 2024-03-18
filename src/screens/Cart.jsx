@@ -45,7 +45,7 @@ const Cart = ()=> {
   );
 };
 
-export default Cart
+export default Cart;
 
 const styles = StyleSheet.create({
   container: {

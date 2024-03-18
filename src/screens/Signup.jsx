@@ -53,7 +53,6 @@ const Signup = () => {
         default:
           break;
       }
-      console.log(err.message)
     }
   };
 

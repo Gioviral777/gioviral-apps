@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../features/auth/authSlice";
 import { loginSchema } from "../validations/loginSchema";
 import { colors } from "../global/colors";
-import { ActivityIndicator } from "react-native";
+import { insertSession } from "../db";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -18,20 +18,33 @@ const Login = ({ navigation }) => {
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    if (result.data) {
+      dispatch(setUser(result.data));
+      insertSession({
+        email: result.data.email,
+        localId: result.data.localId,
+        token: result.data.idToken
+      })
+      .then((result) => console.log(result))
+      .catch(err => console.log(err.message))
+    }
+  }, [result]);
+
   const onSubmit = () => {
     /* console.log("mail", errorMail);
     console.log("password", errorPassword); */
 
     try {
       //limpiamos los errores cada vez que ejecutamos el Register
-      setErrorMail("");
-      setErrorPassword("");
+      //setErrorMail("");
+      //setErrorPassword("");
 
       loginSchema.validateSync({ email, password });
       triggerSignin({ email, password });
-      console.log("Login exitoso");
+      //console.log("Login exitoso");
     } catch (err) {
-      console.log("path", err.path);
+      //console.log("path", err.path);
       switch (err.path) {
         case "email":
           setErrorMail(err.message);
@@ -42,16 +55,9 @@ const Login = ({ navigation }) => {
         default:
           break;
       }
-      console.log(err.message)
+      //console.log(err.message)
     }
   };
-
-  useEffect(() => {
-    console.log(result);
-    if (result.data) {
-      dispatch(setUser(result.data));
-    }
-  }, [result]);
 
   return (
     <View style={styles.main}>

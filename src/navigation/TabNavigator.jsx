@@ -4,10 +4,9 @@ import { StyleSheet, View, Text } from "react-native";
 import ShopStack from '../navigation/ShopStack';
 import CartStack from "./CartStack";
 import { colors } from "../global/colors";
-import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5, FontAwesome6, MaterialCommunityIcons } from '@expo/vector-icons';
 import OrdersStack from "./OrdersStack";
-import MyProfileStack from "../navigation/MyProfileStack";
+import MyProfileStack from "./MyProfileStack";
 
 const TabNavigator = ()=> {
     const Tab = createBottomTabNavigator()

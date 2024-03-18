@@ -6,7 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { useSelector, useDispatch } from "react-redux";
 import { StatusBar } from 'react-native';
 import { useGetProfileImageQuery, useGetUserLocationQuery } from "../services/shopService";
-import { setProfileImage, setUserLocation } from "../features/auth/authSlice";
+import { setProfileImage, setUserLocation, setUser } from "../features/auth/authSlice";
+import { fetchSession } from "../db";
 
 const MainNavigator = () => {
   const {user, localId} = useSelector(state => state.authReducer.value)
@@ -14,6 +15,22 @@ const MainNavigator = () => {
   const {data: location } = useGetUserLocationQuery(localId);
 
   const dispatch = useDispatch();
+
+  useEffect(()=> {
+    (async () => {
+      try{
+        const session = await fetchSession();
+        console.log(session);
+        console.log("local", session.rows._array);
+        if(session?.rows.length){
+          const user = session.rows._array[0]
+          dispatch(setUser(user));
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    })()
+  }, [])
 
   useEffect(()=> {
     if(data) {
