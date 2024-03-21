@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   confirmContainer: {
     alignItems: 'center',
-    justifyContent: 'space-start',
+    justifyContent: 'flex-start',
     backgroundColor: colors.chartreuse_100,
     padding: 8,
     width: '50%',
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   confirmText: {
     fontFamily: 'ChivoBold',
     fontSize: 20,
-    color: 'black',
+    color: 'white',
     textAlign: 'center',
   },
   text: {

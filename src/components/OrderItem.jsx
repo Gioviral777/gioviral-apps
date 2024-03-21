@@ -12,6 +12,12 @@ const OrderItem = ({ item }) => {
     : 0;
 
   const { width, height } = useWindowDimensions();
+
+  // Verificar si item.createdAt es una fecha válida antes de formatearla
+  const formattedDate = isValidDate(item.createdAt)
+    ? new Date(item.createdAt).toLocaleString()
+    : "Fecha no válida";
+
   return (
     <TouchableOpacity style={styles.card} onPress={()=> {}}>
       <View style={styles.textConteiner}>
@@ -20,6 +26,11 @@ const OrderItem = ({ item }) => {
       </View>
     </TouchableOpacity>
   );
+};
+
+// Función para verificar si una fecha es válida
+const isValidDate = (date) => {
+  return date instanceof Date && !isNaN(date);
 };
 
 export default OrderItem;
