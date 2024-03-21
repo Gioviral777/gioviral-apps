@@ -1,20 +1,21 @@
 import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Entypo } from "@expo/vector-icons";
 import Constants from "expo-constants";
-import { Entypo } from "@expo/vector-icons";
 
 const Search = ({onSearch}) => {
     const [input, setInput] = useState ('');
 
+    // Función para manejar la búsqueda
     const handleSearch = () => {
         if (input) {
             onSearch(input);
         }
     };
 
+    // Función para eliminar el texto de entrada
     const removeInput = () => {
-        setInput("");
+        setInput('');
     };
 
   return (

@@ -14,7 +14,7 @@ const InputForm = ({ label, error, onChange, isSecure }) => {
     <View style={styles.inputContainer}>
       <Text style={styles.subtitle}>{label}</Text>
       <TextInput
-        style={styles.input}
+        style={[styles.input, error && styles.errorInput]}
         value={input}
         onChangeText={onChangeText}
         secureTextEntry={isSecure}//si cambiamos el parámetro a true lo muestra con circulitos y false la clave
@@ -42,14 +42,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "red",
     fontFamily: "ChivoRegular",
+    marginTop: 4,
   },
   input: {
     width: "90%",
-    borderWidth: 0,
+    borderWidth: 1,
     borderBottomWidth: 3,
     borderBottomColor: colors.black_100,
     padding: 2,
     fontFamily: "ChivoRegular",
     fontSize: 14,
+    marginTop: 4,
+  },
+  errorInput: {
+    borderColor: "red",
   },
 });

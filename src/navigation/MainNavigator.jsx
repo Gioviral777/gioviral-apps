@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import TabNavigator from "./TabNavigator";
 import AuthStack from "./AuthStack";
 import { NavigationContainer } from "@react-navigation/native";
@@ -16,25 +16,8 @@ const MainNavigator = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(()=> {
-    (async () => {
-      try{
-        const session = await fetchSession();
-        console.log(session);
-        console.log("local", session.rows._array);
-        if(session?.rows.length){
-          const user = session.rows._array[0]
-          dispatch(setUser(user));
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    })()
-  }, [])
-
-  useEffect(()=> {
+    useEffect(()=> {
     if(data) {
-      console.log(data.image);
       dispatch(setProfileImage(data.image))
     }
     if(location) {
@@ -42,6 +25,19 @@ const MainNavigator = () => {
     }
   }, [data, location])
 
+  useEffect(()=> {
+    (async () => {
+      try{
+        const session = await fetchSession();
+        if(session?.rows.length){
+          const user = session.rows._array[0]
+          dispatch(setUser(user));
+        }
+      } catch (error) {
+      }
+    })()
+  }, [])
+  
   return (
     <View style={styles.container}>
       <NavigationContainer>

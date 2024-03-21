@@ -22,11 +22,6 @@ function Header({ title }) {
             <MaterialCommunityIcons name="exit-run" size={24} color="white" />
           </Pressable>
         )}
-        {/* {user ? (
-          <Pressable style={styles.logoutIcon} onPress={onLogout}>
-            <MaterialIcons name="logout" size={24} color="white" />
-          </Pressable>
-        ) : null} */}
       </View>
     );
   }

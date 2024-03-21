@@ -4,11 +4,9 @@ import { colors } from "../global/colors";
 import { TouchableOpacity } from "react-native";
 
 const OrderItem = ({ item }) => {
-  const total = item.items
+  const total = item.items && Array.isArray(item.items)
     ? item.items.reduce(
-      (acc, currentItem) => (acc += currentItem.quantity * currentItem.price),
-      0
-    )
+      (acc, currentItem) => (acc += currentItem.quantity * currentItem.price),0)
     : 0;
 
   const { width, height } = useWindowDimensions();
@@ -20,7 +18,7 @@ const OrderItem = ({ item }) => {
 
   return (
     <TouchableOpacity style={styles.card} onPress={()=> {}}>
-      <View style={styles.textConteiner}>
+      <View style={styles.textContainer}>
         <Text style={styles.textDate}>{new Date(item.createdAt).toLocaleString()}</Text>
         <Text style={styles.textTotal}>$ {total}</Text>
       </View>
@@ -47,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  textConteiner: {
+  textContainer: {
     width: "70%",
     flexDirection: 'column',
     justifyContent: 'flex-start',

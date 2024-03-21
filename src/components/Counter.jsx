@@ -1,10 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import {
-  increment,
-  decrement,
-  incrementByAmount,
-  reset,
-} from "../features/counter/counterSlice";
+import { increment, decrement } from "../features/counter/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Counter = () => {

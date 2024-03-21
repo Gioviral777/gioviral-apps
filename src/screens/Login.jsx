@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable, ActivityIndicator } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import InputForm from "../components/InputForm";
 import SubmitButton from "../components/SubmitButton";
@@ -32,19 +32,10 @@ const Login = ({ navigation }) => {
   }, [result]);
 
   const onSubmit = () => {
-    /* console.log("mail", errorMail);
-    console.log("password", errorPassword); */
-
     try {
-      //limpiamos los errores cada vez que ejecutamos el Register
-      //setErrorMail("");
-      //setErrorPassword("");
-
       loginSchema.validateSync({ email, password });
       triggerSignin({ email, password });
-      //console.log("Login exitoso");
     } catch (err) {
-      //console.log("path", err.path);
       switch (err.path) {
         case "email":
           setErrorMail(err.message);
@@ -55,7 +46,6 @@ const Login = ({ navigation }) => {
         default:
           break;
       }
-      //console.log(err.message)
     }
   };
 

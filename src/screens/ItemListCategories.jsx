@@ -1,28 +1,20 @@
 import { useEffect, useState } from "react";
-import { View, FlatList, StyleSheet } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import ProductItem from "../components/ProductItem";
 import Search from "../components/Search";
 import { useSelector } from "react-redux";
 import { useGetProductsByCategoryQuery } from "../services/shopService";
 import * as Animatable from 'react-native-animatable';
+import { colors } from '../global/colors';
 
 function ItemListCategories({ navigation }) {
   const [products, setProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
-  /* const productsFilteredByCategory = useSelector(
-    (state) => state.shopReducer.value.productsFilteredByCategory
-  ); */
 
   const category = useSelector((state)=> state.shopReducer.value.categorySelected)
   const { data: productsFilteredByCategory, isLoading, error } = useGetProductsByCategoryQuery(category)
 
- /*  useEffect(() => {
-    const productsFiltered = productsFilteredByCategory.filter((product)=> product.title.includes(keyword))
-    setProducts(productsFiltered)
-  }, [productsFilteredByCategory, keyword]); */
-
   useEffect(() => {
-    console.log(productsFilteredByCategory);
     if (productsFilteredByCategory) {
         const productsRaw = Object.values(productsFilteredByCategory)
         const productsFiltered = productsRaw.filter((product) =>
@@ -53,5 +45,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: colors.white_100,
   },
 });

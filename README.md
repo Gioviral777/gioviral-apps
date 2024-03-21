@@ -15,7 +15,7 @@ Gioviral es una agencia de Growth Marketing, donde el **objetivo principal** es 
 
 **El *objetivo* principal de esta app, es brindar una e-commerce para compra de servicios y a futuro, que el cliente pueda gestionar todas sus redes en una app, con estadísticas, estado de planes contratados y demás**
 
-![App Screenshot](https://i.imgur.com/uOwNcFA.png)![App Screenshot](https://i.imgur.com/5j3tVit.jpeg)![App Screenshot](https://i.imgur.com/SC4e3sx.jpeg)![App Screenshot](https://i.imgur.com/pAReTfJ.jpeg)![App Screenshot](https://i.imgur.com/jomJvp0.jpeg)![App Screenshot](https://i.imgur.com/ZkAnxZG.jpeg)![App Screenshot](https://i.imgur.com/VoDAqDx.jpeg)![App Screenshot](https://i.imgur.com/VoDAqDx.jpeg)![App Screenshot](https://i.imgur.com/oBhPBoh.jpeg)![App Screenshot](https://i.imgur.com/zsGlFpU.jpeg)
+![App Screenshot](https://i.imgur.com/uOwNcFA.png)![App Screenshot](https://i.imgur.com/TgAcAfN.jpeg)![App Screenshot](https://i.imgur.com/RL7Nadn.jpeg)![App Screenshot](https://i.imgur.com/pAReTfJ.jpeg)![App Screenshot](https://i.imgur.com/jomJvp0.jpeg)![App Screenshot](https://i.imgur.com/ZkAnxZG.jpeg)![App Screenshot](https://i.imgur.com/VoDAqDx.jpeg)![App Screenshot](https://i.imgur.com/VoDAqDx.jpeg)![App Screenshot](https://i.imgur.com/oBhPBoh.jpeg)![App Screenshot](https://i.imgur.com/zsGlFpU.jpeg)
 
 
 ## Síguenos en nuestras redes sociales

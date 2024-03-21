@@ -22,13 +22,7 @@ const Signup = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
 
-  //console.log(result)
-
   const onSubmit = () => {
-    console.log("mail", errorMail);
-    console.log("password", errorPassword);
-    console.log("confirmPassword", errorConfirmPassword);
-
     try {
       //limpiamos los errores cada vez que ejecutamos el Register
       setErrorMail("");
@@ -37,9 +31,7 @@ const Signup = () => {
 
       signupSchema.validateSync({ email, password, confirmPassword });
       triggerSignup({ email, password });
-      console.log("Registro exitoso");
     } catch (err) {
-      console.log("path", err.path);
       switch (err.path) {
         case "email":
           setErrorMail(err.message);

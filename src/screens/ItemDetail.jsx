@@ -5,7 +5,7 @@ import { colors } from "../global/colors";
 import { useDispatch } from "react-redux";
 import { addItem } from "../features/shop/cartSlice";
 
-const ItemDetail = ({navigation, route}) => {
+const ItemDetail = ({route}) => {
   const [product, setProduct] = useState(null);
 
   const {id} = route.params;
@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
     padding: 6,
   },
   descriptionText: {
-    fontFamily: "ChivoRegular",
+    fontFamily: "ChivoBold",
     fontSize: 16,
     color: "black",
     paddingVertical: 4,
   },
   descriptionTextPrice: {
-    fontFamily: "ChivoRegular",
+    fontFamily: "ChivoBold",
     fontSize: 25,
     color: "black",
     paddingVertical: 6,

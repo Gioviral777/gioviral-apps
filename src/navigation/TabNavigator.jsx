@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, View, Text } from "react-native";
 import ShopStack from '../navigation/ShopStack';
 import CartStack from "./CartStack";
@@ -74,5 +73,6 @@ const styles = StyleSheet.create({
     tabContainer:{
         justifyContent: "center",
         alignItems: "center",
+        width:'100%',
     },
 })
