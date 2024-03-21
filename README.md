@@ -28,10 +28,6 @@ Gioviral es una agencia de Growth Marketing, donde el **objetivo principal** es 
 - **Youtube:** [@GioViralOficial](https://www.youtube.com/@GioViralOficial)
 
 
-
-## Tecnologías Utilizadas
-
-
 ## Tecnologías Utilizadas
 
 | Tecnología | Descripción |
