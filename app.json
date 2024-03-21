@@ -3,7 +3,7 @@
     "name": "gioviral-apps",
     "slug": "gioviral-apps",
     "version": "1.0.0",
-    "orientation": "portrait", 
+    "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gioviral.gioviralapps"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "54aa9ad6-7d16-4983-9277-dc2764f2e0d1"
+      }
     }
   }
 }
