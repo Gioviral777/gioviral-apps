@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
-import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
-import allCartItems from "../data/cart.json";
+import { FlatList, Pressable, StyleSheet, Text, View, Alert } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
-import { useSelector } from "react-redux";
 import { usePostOrderMutation } from "../services/shopService";
 import { colors } from '../global/colors';
+import { clearCart } from "../features/shop/cartSlice";
 
 const Cart = ()=> {
-  /* const[cartItems, setCartItems] = useState([]);
-  const[total, setTotal] = useState(0); */
-
   const cartItems = useSelector((state) => state.cartReducer.value.items);
   const total = useSelector((state) => state.cartReducer.value.total);
   const [triggerPost, result] = usePostOrderMutation();
+  const dispatch = useDispatch();
+  const date = new Date().toLocaleString();
+  const {user} = useSelector(state => state.authReducer.value)
 
   const confirmCart = ()=> {
-    triggerPost({total, cartItems, user: "loggedUser"})
+    triggerPost({ total, cartItems,date, user: user})
+    dispatch(clearCart())
+    Alert.alert( 'successful purchase','successful purchase' [
+      {text: 'OK', onPress: () => console.log('OK Pressed')}
+    ])
   }
-  /* useEffect(()=> {
-    const total = allCartItems.reduce((acum, currentItem)=> acum += (currentItem.quantity * currentItem.price), 0)
-    setTotal(total);
-    setCartItems(allCartItems);
-  }, []); */
 
   return (
     <View style={styles.container}>
@@ -33,13 +31,13 @@ const Cart = ()=> {
             renderItem={({ item }) => <CartItem item={item} />}
             keyExtractor={(cartItem) => cartItem.id}
           />
-          <Text style={styles.confirmText}>Total: ${total}</Text>
-          <Pressable onPress={confirmCart}>
+          <Text style={styles.text}>Total: ${total}</Text>
+          <Pressable style={styles.confirmContainer} onPress={confirmCart}>
             <Text style={styles.confirmText}>Confirm</Text>
           </Pressable>
         </>
       ) : (
-        <Text style={styles.confirmText}>No hay productos agregados</Text>
+        <Text style={styles.confirmText}>No products added</Text>
       )}
     </View>
   );
@@ -50,7 +48,7 @@ export default Cart;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 130,
+    paddingBottom: 120,
     justifyContent: 'flex-end',
     alignItems: 'center',
     backgroundColor: colors.black_100,
@@ -59,16 +57,24 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   confirmContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: 'black',
-    padding: 15,
-    width: '100%',
+    justifyContent: 'space-start',
+    backgroundColor: colors.chartreuse_100,
+    padding: 8,
+    width: '50%',
+    borderRadius: 10,
   },
   confirmText: {
     fontFamily: 'ChivoBold',
+    fontSize: 20,
+    color: 'black',
+    textAlign: 'center',
+  },
+  text: {
+    fontFamily: 'ChivoBold',
     fontSize: 18,
     color: 'white',
+    textAlign: 'center',
+    padding: 8,
   },
 })

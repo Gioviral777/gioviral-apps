@@ -47,37 +47,21 @@ export const cartSlice = createSlice({
       }
     },
     removeItem: (state, action) => {
-      //Logica para remover el producto
-      //Encontrar el índice del item que queremos eliminar
-      const indexToRemove = state.value.items.findIndex(
-        (item) => item.id === action.payload.id
-      );
-
-      //Verificar si el índice es válido
-      if (indexToRemove !== -1) {
-        //Crear un nuevo array de items excluyendo el item a eliminar
-        const updatedItems = state.value.items.filter(
-          (item, index) => index !== indexToRemove
-        );
-
-        //Calcular el nuevo total
-        const total = updatedItems.reduce(
-          (acum, currentItem) => (acum += currentItem.quantity * currentItem.price),
-          0
-        );
-
-        //Actualizamos el estado del carrito
-        state.value = {
-          ...state.value,
-          items: updatedItems,
-          total,
-          updatedAt: new Date().toLocaleDateString(),
-        };
+      // Encuentra el índice del producto que deseas eliminar
+      const index = state.value.items.findIndex(item => item.id === action.payload);
+      if (index !== -1) {
+        state.value.items.splice(index, 1);
       }
+      // Actualiza el total del carrito
+      state.value.total = state.value.items.reduce((total, item) => total + (item.price * item.quantity), 0);
     },
+    clearCart:(state)=>{
+      state.value.items = [];
+      state.value.total = 0;
+    }
   },
 });
 
-export const { addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,20 +1,24 @@
-import { StyleSheet, Text, View} from "react-native";
+import { StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import React from "react";
 import { colors } from "../global/colors";
+import { TouchableOpacity } from "react-native";
 
 const OrderItem = ({ item }) => {
-  const total = item.items.reduce(
-    (acum, currentItem) => (acum += currentItem.quantity * currentItem.price),
-    0
-  );
+  const total = item.items
+    ? item.items.reduce(
+      (acc, currentItem) => (acc += currentItem.quantity * currentItem.price),
+      0
+    )
+    : 0;
 
+  const { width, height } = useWindowDimensions();
   return (
-    <View style={styles.card} onPress={()=> {}}>
+    <TouchableOpacity style={styles.card} onPress={()=> {}}>
       <View style={styles.textConteiner}>
         <Text style={styles.textDate}>{new Date(item.createdAt).toLocaleString()}</Text>
         <Text style={styles.textTotal}>$ {total}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -23,14 +27,13 @@ export default OrderItem;
 const styles = StyleSheet.create({
   card: {
     flex: 1,
-    height: 100,
     backgroundColor: colors.black_100,
     padding: 10,
     margin: 10,
     borderWidth: 2,
     borderRadius: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
   textConteiner: {

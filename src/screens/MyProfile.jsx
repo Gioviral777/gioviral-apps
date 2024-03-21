@@ -26,6 +26,7 @@ const MyProfile = ({ navigation }) => {
       <Pressable
         style={styles.button}
         onPress={() => navigation.navigate("Image Selector")}
+        pressedOpacity={0.7}
       >
         <Text style={styles.text}>Add profile picture</Text>
       </Pressable>
@@ -43,14 +44,16 @@ export default MyProfile;
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
     padding: 10,
-    gap: 15,
+    gap: 20,
     alignItems: "center",
     justifyContent: "flex-start",
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
+    borderRadius: 100,
   },
   button: {
     width: "80%",
@@ -59,10 +62,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
+    marginBottom: 10,
+    borderRadius: 10,
   },
   text: {
     fontFamily: "ChivoBold",
     fontSize: 20,
     color: "black",
+    marginLeft: 8,
   },
 });

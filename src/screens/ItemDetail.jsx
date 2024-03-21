@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
   },
   buy: {
     padding: 10,
-    borderRadius: 6,
+    borderRadius: 10,
     backgroundColor: colors.chartreuse_100,
   },
   buyText: {
     fontFamily: "ChivoBold",
     fontSize: 22,
-    color: "white",
+    color: "black",
   },
 });
