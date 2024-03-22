@@ -8,7 +8,7 @@
 
 ## Sobre el Proyecto
 
-***Aplicación nativa desarrollada como proyecto final***
+**_Aplicación nativa desarrollada como proyecto final_**
 
 Gioviral es una agencia de Growth Marketing, donde el **objetivo principal** es el **crecimiento exponencial** de _nuestros clientes_ utilizando toda nuestra experiencia, conocimientos, innovación, creatividad y ayudándonos con la inteligencia aritficial.
 
@@ -59,197 +59,235 @@ Se recomenda utilizar Expo Go para ver la app
 
 ## Instalación Dependencias
 
+**@react-navigation/bottom-tabs:**
 
-  **@react-navigation/bottom-tabs:**
+Descripción: Proporciona una barra de pestañas en la parte inferior para la navegación en aplicaciones React Native.
 
-  Descripción: Proporciona una barra de pestañas en la parte inferior para la navegación en aplicaciones React Native.
+Comando de instalación:
 
-  Comando de instalación: 
-  ```bash
-  npm install @react-navigation/bottom-tabs
-  ```
+```bash
+npm install @react-navigation/bottom-tabs
+```
 
-  **@react-navigation/native:**
+**@react-navigation/native:**
 
-  Descripción: React Navigation es una biblioteca de navegación para React Native que permite la navegación entre diferentes pantallas en una aplicación.
+Descripción: React Navigation es una biblioteca de navegación para React Native que permite la navegación entre diferentes pantallas en una aplicación.
 
-  **Comando de instalación:** 
-  ```bash
-  npm install @react-navigation/native
-  ```
+**Comando de instalación:**
 
-  **@react-navigation/native-stack:**
+```bash
+npm install @react-navigation/native
+```
 
-  Descripción: Proporciona una forma de gestionar la navegación en pilas (stacks) en React Native.
-  
-  Comando de instalación: 
-  ```bash
-  npm install @react-navigation/native-stack
-  ```
+**@react-navigation/native-stack:**
 
-  **@react-navigation/stack:**
+Descripción: Proporciona una forma de gestionar la navegación en pilas (stacks) en React Native.
 
-  Descripción: Similar a @react-navigation/native-stack, esta dependencia proporciona una solución de navegación en pilas (stacks) para React Native.
-  
-  Comando de instalación: 
-  ```bash
-  npm install @react-navigation/stack
-  ```
+Comando de instalación:
 
-  **@reduxjs/toolkit:**
+```bash
+npm install @react-navigation/native-stack
+```
 
-  Descripción: Redux Toolkit es un paquete de utilidades oficial para Redux, que simplifica la configuración y el uso de Redux en aplicaciones React.
-  
-  Comando de instalación: 
-  ```bash
-  npm install @reduxjs/toolkit
-  ```
-  **expo:**
+**@react-navigation/stack:**
 
-  Descripción: Expo es un conjunto de herramientas y servicios para desarrollar, construir y publicar aplicaciones móviles para iOS y Android con React Native.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo
-  ```
+Descripción: Similar a @react-navigation/native-stack, esta dependencia proporciona una solución de navegación en pilas (stacks) para React Native.
 
-  **expo-app-loading:**
+Comando de instalación:
 
-  Descripción: Proporciona componentes de carga para aplicaciones Expo.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-app-loading
-  ```
-  
-  **expo-file-system:**
+```bash
+npm install @react-navigation/stack
+```
 
-  Descripción: Ofrece un sistema de archivos para manipular archivos en aplicaciones Expo.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-file-system
-  ```
+**@reduxjs/toolkit:**
 
-  **expo-font:**
+Descripción: Redux Toolkit es un paquete de utilidades oficial para Redux, que simplifica la configuración y el uso de Redux en aplicaciones React.
 
-  Descripción: Facilita la carga y el uso de fuentes personalizadas en aplicaciones Expo.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-font
-  ```
+Comando de instalación:
 
-  **expo-image-picker:**
+```bash
+npm install @reduxjs/toolkit
+```
 
-  Descripción: Permite a los usuarios seleccionar imágenes de su biblioteca de fotos o tomar una foto con la cámara en aplicaciones Expo.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-image-picker
-  ```
+**expo:**
 
-  **expo-location:**
+Descripción: Expo es un conjunto de herramientas y servicios para desarrollar, construir y publicar aplicaciones móviles para iOS y Android con React Native.
 
-  Descripción: Proporciona acceso a la ubicación del dispositivo en aplicaciones Expo, incluida la obtención de coordenadas GPS.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-location
-  ```
-  
-  **expo-sqlite:**
+Comando de instalación:
 
-  Descripción: Proporciona una API para acceder a una base de datos SQLite local en aplicaciones Expo.
-  
-  Comando de instalación: 
-  ```bash
-  npm install expo-sqlite
-  ```
+```bash
+npm install expo
+```
 
-  **expo-status-bar:**
-  
-  Descripción: Componente que proporciona una barra de estado en la parte superior de la pantalla en aplicaciones Expo.
+**expo-app-loading:**
 
-  Comando de instalación: 
-  ```bash
-  npm install expo-status-bar
-  ```
+Descripción: Proporciona componentes de carga para aplicaciones Expo.
 
-  **react-dom:**
-  
-  Descripción: Proporciona métodos específicos del DOM para la renderización de aplicaciones React en el navegador web.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-dom
-  ```
+Comando de instalación:
 
-  **react-native-animatable:**
-  
-  Descripción: Biblioteca que permite la animación fácil y declarativa en aplicaciones React Native.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-native-animatable
-  ```
+```bash
+npm install expo-app-loading
+```
 
-  **react-native-safe-area-context:**
-  
-  Descripción: Proporciona un contexto para obtener información sobre el área segura del dispositivo en React Native.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-native-safe-area-context
-  ```
+**expo-file-system:**
 
-  **react-native-screens:**
+Descripción: Ofrece un sistema de archivos para manipular archivos en aplicaciones Expo.
 
-  Descripción: Biblioteca que optimiza la manipulación de las pantallas en React Native, proporcionando una API de navegación fluida.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-native-screens
-  ```
-  
-  **react-native-web:**
+Comando de instalación:
 
-  Descripción: Permite la renderización de aplicaciones React Native en la web.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-native-web
-  ```
-  
-  **react-redux:**
-  
-  Descripción: Proporciona integración entre React y Redux, permitiendo la gestión del estado de la aplicación de forma predecible.
-  
-  Comando de instalación: 
-  ```bash
-  npm install react-redux
-  ```
+```bash
+npm install expo-file-system
+```
 
-  **yup:**
+**expo-font:**
 
-  Descripción: Biblioteca de validación de esquemas para valores JavaScript y JSON.
-  
-  Comando de instalación: 
-  ```bash
-  npm install yup
-  ```
+Descripción: Facilita la carga y el uso de fuentes personalizadas en aplicaciones Expo.
+
+Comando de instalación:
+
+```bash
+npm install expo-font
+```
+
+**expo-image-picker:**
+
+Descripción: Permite a los usuarios seleccionar imágenes de su biblioteca de fotos o tomar una foto con la cámara en aplicaciones Expo.
+
+Comando de instalación:
+
+```bash
+npm install expo-image-picker
+```
+
+**expo-location:**
+
+Descripción: Proporciona acceso a la ubicación del dispositivo en aplicaciones Expo, incluida la obtención de coordenadas GPS.
+
+Comando de instalación:
+
+```bash
+npm install expo-location
+```
+
+**expo-sqlite:**
+
+Descripción: Proporciona una API para acceder a una base de datos SQLite local en aplicaciones Expo.
+
+Comando de instalación:
+
+```bash
+npm install expo-sqlite
+```
+
+**expo-status-bar:**
+
+Descripción: Componente que proporciona una barra de estado en la parte superior de la pantalla en aplicaciones Expo.
+
+Comando de instalación:
+
+```bash
+npm install expo-status-bar
+```
+
+**react-dom:**
+
+Descripción: Proporciona métodos específicos del DOM para la renderización de aplicaciones React en el navegador web.
+
+Comando de instalación:
+
+```bash
+npm install react-dom
+```
+
+**react-native-animatable:**
+
+Descripción: Biblioteca que permite la animación fácil y declarativa en aplicaciones React Native.
+
+Comando de instalación:
+
+```bash
+npm install react-native-animatable
+```
+
+**react-native-safe-area-context:**
+
+Descripción: Proporciona un contexto para obtener información sobre el área segura del dispositivo en React Native.
+
+Comando de instalación:
+
+```bash
+npm install react-native-safe-area-context
+```
+
+**react-native-screens:**
+
+Descripción: Biblioteca que optimiza la manipulación de las pantallas en React Native, proporcionando una API de navegación fluida.
+
+Comando de instalación:
+
+```bash
+npm install react-native-screens
+```
+
+**react-native-web:**
+
+Descripción: Permite la renderización de aplicaciones React Native en la web.
+
+Comando de instalación:
+
+```bash
+npm install react-native-web
+```
+
+**react-redux:**
+
+Descripción: Proporciona integración entre React y Redux, permitiendo la gestión del estado de la aplicación de forma predecible.
+
+Comando de instalación:
+
+```bash
+npm install react-redux
+```
+
+**yup:**
+
+Descripción: Biblioteca de validación de esquemas para valores JavaScript y JSON.
+
+Comando de instalación:
+
+```bash
+npm install yup
+```
+
 ## Capturas de pantalla 👇
 
-![image](https://i.imgur.com/uOwNcFA.png){width=70%}
-<img src="https://imgbb.host/images/v6apr.jpeg" alt="Login" style= "width:300px">
-<img src="https://imgbb.host/images/vLuuz.jpeg" alt="Register" style= "width:300px">
-<img src="https://imgbb.host/images/v6HPW.jpeg" alt="Categories" style= "width:300px">
-<img src="https://imgbb.host/images/v6sV2.jpeg" alt="Products" style= "width:300px">
-<img src="https://imgbb.host/images/v6Mxx.jpeg" alt="Products Detail" style= "width:300px">
-<img src="https://imgbb.host/images/v6Q3n.jpeg" alt="Cart" style= "width:300px">
-<img src="https://imgbb.host/images/v63eQ.jpeg" alt="Orders" style= "width:300px">
-<img src="https://imgbb.host/images/v6ZLK.jpeg" alt="My Profile" style= "width:300px">
-<img src="https://imgbb.host/images/v62ge.jpeg" alt="Camera" style= "width:300px">
+<div style="text-align:center;">
+    <img src="https://imgbb.host/images/vbITc.jpeg" alt="Gioviral" style="width: 400px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://imgbb.host/images/v6apr.jpeg" alt="Login" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/RL7Nadn.jpeg" alt="Register" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/pAReTfJ.jpeg" alt="Categories" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/jomJvp0.jpeg" alt="Details" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/ZkAnxZG.jpeg" alt="Cart" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/VoDAqDx.jpeg" alt="Orders" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/oBhPBoh.jpeg" alt="Profile" style="width: 300px;">
+</div>
+<div style="text-align:center;">
+    <img src="https://i.imgur.com/zsGlFpU.jpeg" alt="Camera" style="width: 300px;">
+</div>
 
 ### Agradecimientos
 
