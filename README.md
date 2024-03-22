@@ -240,17 +240,16 @@ Se recomenda utilizar Expo Go para ver la app
   ```
 ## Capturas de pantalla 👇
 
-<img scr="https://i.imgur.com/uOwNcFA.png" style="width: 300px">
-<!-- ![image](https://i.imgur.com/uOwNcFA.png){width=70%}
-![image](https://i.imgur.com/TgAcAfN.jpeg){width=70%}
-![image](https://i.imgur.com/RL7Nadn.jpeg){width=70%}
-![image](https://i.imgur.com/pAReTfJ.jpeg){width=70%}
-![image](https://i.imgur.com/jomJvp0.jpeg){width=70%}
-![image](https://i.imgur.com/ZkAnxZG.jpeg){width=70%}
-![image](https://i.imgur.com/VoDAqDx.jpeg){width=70%}
-![image](https://i.imgur.com/VoDAqDx.jpeg){width=70%}
-![image](https://i.imgur.com/oBhPBoh.jpeg){width=70%}
-![image](https://i.imgur.com/zsGlFpU.jpeg){width=70%} -->
+![image](https://i.imgur.com/uOwNcFA.png){width=70%}
+<img src="https://imgbb.host/images/v6apr.jpeg" alt="Login" style= "width:300px">
+<img src="https://imgbb.host/images/vLuuz.jpeg" alt="Register" style= "width:300px">
+<img src="https://imgbb.host/images/v6HPW.jpeg" alt="Categories" style= "width:300px">
+<img src="https://imgbb.host/images/v6sV2.jpeg" alt="Products" style= "width:300px">
+<img src="https://imgbb.host/images/v6Mxx.jpeg" alt="Products Detail" style= "width:300px">
+<img src="https://imgbb.host/images/v6Q3n.jpeg" alt="Cart" style= "width:300px">
+<img src="https://imgbb.host/images/v63eQ.jpeg" alt="Orders" style= "width:300px">
+<img src="https://imgbb.host/images/v6ZLK.jpeg" alt="My Profile" style= "width:300px">
+<img src="https://imgbb.host/images/v62ge.jpeg" alt="Camera" style= "width:300px">
 
 ### Agradecimientos
 
