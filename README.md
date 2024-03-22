@@ -240,7 +240,8 @@ Se recomenda utilizar Expo Go para ver la app
   ```
 ## Capturas de pantalla 👇
 
-![image](https://i.imgur.com/uOwNcFA.png){width=70%}
+<img scr="https://i.imgur.com/uOwNcFA.png" style="width: 300px">
+<!-- ![image](https://i.imgur.com/uOwNcFA.png){width=70%}
 ![image](https://i.imgur.com/TgAcAfN.jpeg){width=70%}
 ![image](https://i.imgur.com/RL7Nadn.jpeg){width=70%}
 ![image](https://i.imgur.com/pAReTfJ.jpeg){width=70%}
@@ -249,7 +250,7 @@ Se recomenda utilizar Expo Go para ver la app
 ![image](https://i.imgur.com/VoDAqDx.jpeg){width=70%}
 ![image](https://i.imgur.com/VoDAqDx.jpeg){width=70%}
 ![image](https://i.imgur.com/oBhPBoh.jpeg){width=70%}
-![image](https://i.imgur.com/zsGlFpU.jpeg){width=70%}
+![image](https://i.imgur.com/zsGlFpU.jpeg){width=70%} -->
 
 ### Agradecimientos
 
