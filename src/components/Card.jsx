@@ -9,11 +9,11 @@ const Card = ({children, style}) => {
   );
 };
 
-export default Card
+export default Card;
 
 const styles = StyleSheet.create({
     conteiner: {
-        shadowColor: "#ffff",
+        shadowColor: "#000",
         shadowOffset: {
           width: 0,
           height: 2,

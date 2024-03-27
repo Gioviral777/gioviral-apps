@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React, { useEffect, useState } from "react";
+import { useNavigation } from '@react-navigation/native';
 import allProducts from "../data/products.json";
 import { colors } from "../global/colors";
 import { useDispatch } from "react-redux";
@@ -7,13 +8,13 @@ import { addItem } from "../features/shop/cartSlice";
 
 const ItemDetail = ({route}) => {
   const [product, setProduct] = useState(null);
-
   const {id} = route.params;
-
   const dispatch = useDispatch()
+  const navigation = useNavigation();
 
   const onAddCart = () => {
-    dispatch(addItem({...product, quantity: 1}))
+    dispatch(addItem({...product, quantity: 1}));
+    navigation.navigate('Cart');
   }
 
   useEffect(() => {

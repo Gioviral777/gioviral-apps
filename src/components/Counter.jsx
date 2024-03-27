@@ -43,23 +43,9 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "gray",
   },
-  span: {
-    width: "43%",
-    padding: 10,
-    textAlign: "center",
-    fontSize: 20,
-    fontFamily: "ChivoRegular",
-  },
-  spanInput: {
-    width: "43%",
-    padding: 10,
-    textAlign: "center",
-    fontSize: 16,
-    fontFamily: "ChivoRegular",
-  },
   buttonText: {
     fontSize: 18,
-    fontFamily: "ChivoRegular",
+    fontFamily: "ChivoBold",
     color: "white",
   },
 });
